@@ -1,0 +1,6 @@
+.venv/
+third_party/
+__pycache__/
+out/
+*.mp4
+.env

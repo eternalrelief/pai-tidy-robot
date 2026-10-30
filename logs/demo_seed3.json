@@ -1,0 +1,906 @@
+[
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "table"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "table"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "ハサミ"
+    },
+    {
+     "id": 3,
+     "name": "消しゴム"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 1,
+   "destination": "back",
+   "reason": "電池は食べ物でも文房具でもないので奥の箱へ移す。"
+  },
+  "seconds": 3.59
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "table"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "ハサミ"
+    },
+    {
+     "id": 3,
+     "name": "消しゴム"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 2,
+   "destination": "right",
+   "reason": "ハサミは文房具なので右の箱へ移す。"
+  },
+  "seconds": 3.08
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "table"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "ハサミ"
+    },
+    {
+     "id": 3,
+     "name": "消しゴム"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 2,
+   "destination": "right",
+   "reason": "ハサミは前の手で失敗し机に残っているので右の箱へ。"
+  },
+  "seconds": 8.09
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "right"
+   },
+   {
+    "id": 3,
+    "location": "table"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "ハサミ"
+    },
+    {
+     "id": 3,
+     "name": "消しゴム"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 3,
+   "destination": "right",
+   "reason": "消しゴムは文房具なので右の箱へ入れる。"
+  },
+  "seconds": 2.45
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "right"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "right"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "おにぎり"
+    },
+    {
+     "id": 3,
+     "name": "ハサミ"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "消しゴム"
+    },
+    {
+     "id": 7,
+     "name": "ホチキス"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 2,
+   "destination": "left",
+   "reason": "おにぎりは食べ物なので左の箱へ入れる。"
+  },
+  "seconds": 3.5
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "left"
+   },
+   {
+    "id": 3,
+    "location": "right"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "table"
+   },
+   {
+    "id": 6,
+    "location": "right"
+   },
+   {
+    "id": 7,
+    "location": "table"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "おにぎり"
+    },
+    {
+     "id": 3,
+     "name": "ハサミ"
+    },
+    {
+     "id": 4,
+     "name": "みかん"
+    },
+    {
+     "id": 5,
+     "name": "チョコ"
+    },
+    {
+     "id": 6,
+     "name": "消しゴム"
+    },
+    {
+     "id": 7,
+     "name": "ホチキス"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 4,
+   "destination": "left",
+   "reason": "みかんは食べ物なので左の箱へ入れる。"
+  },
+  "seconds": 4.23
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "left"
+   },
+   {
+    "id": 3,
+    "location": "right"
+   },
+   {
+    "id": 4,
+    "location": "table"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "おにぎり"
+    },
+    {
+     "id": 3,
+     "name": "ハサミ"
+    },
+    {
+     "id": 4,
+     "name": "チョコ"
+    },
+    {
+     "id": 5,
+     "name": "消しゴム"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "みかん"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 4,
+   "destination": "left",
+   "reason": "机の上のチョコは食べ物なので左の箱へ移す。"
+  },
+  "seconds": 3.71
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "left"
+   },
+   {
+    "id": 3,
+    "location": "right"
+   },
+   {
+    "id": 4,
+    "location": "left"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "おにぎり"
+    },
+    {
+     "id": 3,
+     "name": "ハサミ"
+    },
+    {
+     "id": 4,
+     "name": "チョコ"
+    },
+    {
+     "id": 5,
+     "name": "消しゴム"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "みかん"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 6,
+   "destination": "right",
+   "reason": "ホチキスは文房具なのに机に残っているので右の箱へ移す。"
+  },
+  "seconds": 3.18
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。 追加：チョコは後で食べるから、机の上に残して。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "left"
+   },
+   {
+    "id": 3,
+    "location": "right"
+   },
+   {
+    "id": 4,
+    "location": "left"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "おにぎり"
+    },
+    {
+     "id": 3,
+     "name": "ハサミ"
+    },
+    {
+     "id": 4,
+     "name": "チョコ"
+    },
+    {
+     "id": 5,
+     "name": "消しゴム"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "みかん"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 4,
+   "destination": "table",
+   "reason": "チョコは机に残す指示なのに左の箱にあるため戻す。"
+  },
+  "seconds": 7.03
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。 追加：チョコは後で食べるから、机の上に残して。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "left"
+   },
+   {
+    "id": 4,
+    "location": "right"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "table"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "チョコ"
+    },
+    {
+     "id": 3,
+     "name": "おにぎり"
+    },
+    {
+     "id": 4,
+     "name": "ハサミ"
+    },
+    {
+     "id": 5,
+     "name": "消しゴム"
+    },
+    {
+     "id": 6,
+     "name": "ホチキス"
+    },
+    {
+     "id": 7,
+     "name": "みかん"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 6,
+   "destination": "right",
+   "reason": "ホチキスは文房具なのに机に残っているので右の箱へ移す。"
+  },
+  "seconds": 3.44
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。 追加：チョコは後で食べるから、机の上に残して。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "left"
+   },
+   {
+    "id": 4,
+    "location": "right"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "right"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "table"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "チョコ"
+    },
+    {
+     "id": 3,
+     "name": "おにぎり"
+    },
+    {
+     "id": 4,
+     "name": "ホチキス"
+    },
+    {
+     "id": 5,
+     "name": "ハサミ"
+    },
+    {
+     "id": 6,
+     "name": "消しゴム"
+    },
+    {
+     "id": 7,
+     "name": "みかん"
+    },
+    {
+     "id": 8,
+     "name": "クッキー"
+    }
+   ],
+   "decision": "pick",
+   "target_id": 8,
+   "destination": "left",
+   "reason": "クッキーは食べ物なのに机に残っているので左の箱へ移す。"
+  },
+  "seconds": 4.73
+ },
+ {
+  "instruction": "お客さんが来るので机を片付けて。食べ物は左の箱、文房具は右の箱へ。どちらでもない物は奥の箱へ。 追加：チョコは後で食べるから、机の上に残して。",
+  "listing": [
+   {
+    "id": 1,
+    "location": "back"
+   },
+   {
+    "id": 2,
+    "location": "table"
+   },
+   {
+    "id": 3,
+    "location": "left"
+   },
+   {
+    "id": 4,
+    "location": "right"
+   },
+   {
+    "id": 5,
+    "location": "right"
+   },
+   {
+    "id": 6,
+    "location": "right"
+   },
+   {
+    "id": 7,
+    "location": "left"
+   },
+   {
+    "id": 8,
+    "location": "left"
+   }
+  ],
+  "response": {
+   "objects": [
+    {
+     "id": 1,
+     "name": "電池"
+    },
+    {
+     "id": 2,
+     "name": "チョコ"
+    },
+    {
+     "id": 3,
+     "name": "おにぎり"
+    },
+    {
+     "id": 4,
+     "name": "ホチキス"
+    },
+    {
+     "id": 5,
+     "name": "ハサミ"
+    },
+    {
+     "id": 6,
+     "name": "消しゴム"
+    },
+    {
+     "id": 7,
+     "name": "クッキー"
+    },
+    {
+     "id": 8,
+     "name": "みかん"
+    }
+   ],
+   "decision": "done",
+   "target_id": 0,
+   "destination": "none",
+   "reason": "全ての物が指示通りの場所にあり、チョコも机に残っている。"
+  },
+  "seconds": 3.3
+ }
+]

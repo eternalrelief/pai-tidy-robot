@@ -1,0 +1,152 @@
+[
+ {
+  "seed": 1,
+  "steps": 12,
+  "final": {
+   "cookie": "left",
+   "orange": "left",
+   "choco": "table",
+   "scissors": "right",
+   "eraser": "right",
+   "stapler": "right",
+   "battery": "back",
+   "onigiri": "left"
+  },
+  "ok": {
+   "cookie": true,
+   "orange": true,
+   "choco": true,
+   "scissors": true,
+   "eraser": true,
+   "stapler": true,
+   "battery": true,
+   "onigiri": true
+  },
+  "success": true,
+  "events": [
+   "あっ、クッキーを途中で落としてしまった",
+   "途中で人がおにぎりを置いた",
+   "人から追加の指示：チョコは机に残して"
+  ]
+ },
+ {
+  "seed": 2,
+  "steps": 12,
+  "final": {
+   "cookie": "left",
+   "orange": "left",
+   "choco": "table",
+   "scissors": "right",
+   "eraser": "right",
+   "stapler": "right",
+   "battery": "back",
+   "onigiri": "left"
+  },
+  "ok": {
+   "cookie": true,
+   "orange": true,
+   "choco": true,
+   "scissors": true,
+   "eraser": true,
+   "stapler": true,
+   "battery": true,
+   "onigiri": true
+  },
+  "success": true,
+  "events": [
+   "あっ、クッキーを途中で落としてしまった",
+   "途中で人がおにぎりを置いた",
+   "人から追加の指示：チョコは机に残して"
+  ]
+ },
+ {
+  "seed": 4,
+  "steps": 12,
+  "final": {
+   "cookie": "left",
+   "orange": "left",
+   "choco": "table",
+   "scissors": "right",
+   "eraser": "right",
+   "stapler": "right",
+   "battery": "back",
+   "onigiri": "left"
+  },
+  "ok": {
+   "cookie": true,
+   "orange": true,
+   "choco": true,
+   "scissors": true,
+   "eraser": true,
+   "stapler": true,
+   "battery": true,
+   "onigiri": true
+  },
+  "success": true,
+  "events": [
+   "あっ、チョコを途中で落としてしまった",
+   "途中で人がおにぎりを置いた",
+   "人から追加の指示：チョコは机に残して"
+  ]
+ },
+ {
+  "seed": 5,
+  "steps": 13,
+  "final": {
+   "cookie": "left",
+   "orange": "left",
+   "choco": "table",
+   "scissors": "right",
+   "eraser": "right",
+   "stapler": "right",
+   "battery": "back",
+   "onigiri": "left"
+  },
+  "ok": {
+   "cookie": true,
+   "orange": true,
+   "choco": true,
+   "scissors": true,
+   "eraser": true,
+   "stapler": true,
+   "battery": true,
+   "onigiri": true
+  },
+  "success": true,
+  "events": [
+   "あっ、みかんを途中で落としてしまった",
+   "途中で人がおにぎりを置いた",
+   "人から追加の指示：チョコは机に残して"
+  ]
+ },
+ {
+  "seed": 6,
+  "steps": 12,
+  "final": {
+   "cookie": "left",
+   "orange": "left",
+   "choco": "table",
+   "scissors": "right",
+   "eraser": "right",
+   "stapler": "right",
+   "battery": "back",
+   "onigiri": "left"
+  },
+  "ok": {
+   "cookie": true,
+   "orange": true,
+   "choco": true,
+   "scissors": true,
+   "eraser": true,
+   "stapler": true,
+   "battery": true,
+   "onigiri": true
+  },
+  "success": true,
+  "events": [
+   "あっ、クッキーを途中で落としてしまった",
+   "途中で人がおにぎりを置いた",
+   "人から追加の指示：チョコは机に残して"
+  ]
+ }
+]

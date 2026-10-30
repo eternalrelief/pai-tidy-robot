@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><title>PAI最終課題 説明資料</title>
+<style>
+@page{size:A4;margin:17mm 18mm}
+:root{--ink:#1a1e24;--mid:#4c5563;--accent:#a8331f;--line:#c9ced6}
+body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;color:var(--ink);font-size:12pt;line-height:1.72;margin:0}
+h1{font-size:23pt;line-height:1.3;margin:0 0 3mm}
+h2{font-size:15pt;margin:7mm 0 2mm}
+p{margin:0 0 2.6mm}
+.lead{font-size:13pt;margin-bottom:5mm}
+.meta{color:var(--mid);font-size:11pt;margin-bottom:6mm}
+ul{margin:0 0 3mm;padding-left:5.5mm}li{margin-bottom:1.2mm}
+figure{margin:3mm 0 4mm}figure img,figure svg{width:100%;display:block}
+figcaption{font-size:10.5pt;color:var(--mid);margin-top:1.5mm}
+table{width:100%;border-collapse:collapse;margin:2mm 0 4mm;font-size:11.5pt}
+th,td{text-align:left;padding:1.6mm 2mm;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mid);font-weight:600}
+.big{font-size:26pt;font-weight:700;color:var(--accent);line-height:1.2}
+.nums{display:flex;gap:10mm;margin:2mm 0 4mm}.nums p{margin:0;font-size:10.5pt;color:var(--mid)}
+.break{break-before:page}
+.small{width:62%}
+</style></head><body>
+<h1>言葉で頼める片付けロボット</h1>
+<p class="meta">Physical AI 応用編1 最終課題 説明資料</p>
+<p class="lead">「お客さんが来るので机を片付けて」のような日本語の指示を受けて、ロボットアームが画面を見ながら机の上を片付けます。落とす、物が増える、指示が変わるといった想定外があっても、画面を見直して自分で立て直します。</p>
+
+<h2>目的</h2>
+<p>決まった位置の物を決まった手順で運ぶロボットは、物や置き場所が変わると動けません。家庭や小さな職場で役に立つには、「食べ物」「文房具」のような意味で物を見分け、状況が変わっても続けられる必要があります。そこで、意味の判断をAIに、位置の計測と動作を従来の制御に分担させ、両方の強みを生かす構成を試しました。</p>
+
+<h2>課題の内容</h2>
+<p>シミュレーターMuJoCo上で、Franka Pandaに8個の物を片付けさせました。物の上面には「クッキー」「ハサミ」などの文字があり、色や形では分類できないようにしています。指示は「食べ物は左の箱、文房具は右の箱、どちらでもない物は奥の箱」です。</p>
+
+<h2>仕組み</h2>
+<figure>
+<svg viewBox="0 0 700 150" role="img" aria-label="見る、判断する、動く、確かめるの繰り返し">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#4c5563"/></marker></defs>
+<g font-family="Hiragino Sans" text-anchor="middle">
+<g fill="#eef0f3"><rect x="0" y="16" width="150" height="86"/><rect x="183" y="16" width="150" height="86"/><rect x="366" y="16" width="150" height="86"/><rect x="549" y="16" width="150" height="86"/></g>
+<g font-size="19" font-weight="700" fill="#1a1e24"><text x="75" y="50">見る</text><text x="258" y="50">判断する</text><text x="441" y="50">動く</text><text x="624" y="50">確かめる</text></g>
+<g font-size="14" fill="#4c5563"><text x="75" y="76">深度カメラで</text><text x="75" y="94">位置と向きを測る</text><text x="258" y="76">Claudeが画像から</text><text x="258" y="94">次の1手を決める</text><text x="441" y="76">逆運動学で</text><text x="441" y="94">掴んで運ぶ</text><text x="624" y="76">腕をどけて</text><text x="624" y="94">結果を撮り直す</text></g>
+<g stroke="#4c5563" stroke-width="2" fill="none"><path d="M150 59H181" marker-end="url(#a)"/><path d="M333 59H364" marker-end="url(#a)"/><path d="M516 59H547" marker-end="url(#a)"/><path d="M624 102V132H75V104" marker-end="url(#a)"/></g>
+<text x="350" y="125" font-size="13" fill="#4c5563">AIが「全部終わった」と判断するまで繰り返す</text>
+</g></svg>
+</figure>
+<ul>
+<li>AIの活用：画像の認識と判断にClaude（推論のみ、学習はしていません）を使いました。全体の画像と物ごとの拡大画像を渡し、次に動かす物と行き先を決まった形式で返させます。</li>
+<li>計測：画素の座標をAIに答えさせると誤差が大きくなるため、物の検出と位置・向きは深度画像から計算しました。AIは番号で物を指定するだけです。</li>
+<li>動作：計測した向きに合わせて手首を回し、物の短辺を挟みます。</li>
+</ul>
+
+<h2 class="break">工夫した点</h2>
+<ul>
+<li><strong>計画を一度に立てず、1手ごとに決めます。</strong>毎回いまの画面を見て判断するので、計画を作り直す処理を別に書かなくても想定外に対応できます。</li>
+<li><strong>「動かした」と「片付いた」を分けました。</strong>履歴には「動作は実行した。結果は画像で確認すること」とだけ残し、成功したと思い込まないようにしています。</li>
+<li><strong>AIの応答を記録して再生できます。</strong>APIキーがなくても同じ実行を再現できます。</li>
+</ul>
+
+<h2>想定外への対応</h2>
+<p>動画では3つの出来事をプログラムで意図的に起こしています。</p>
+<table>
+<tr><th>出来事</th><th>AIの対応</th></tr>
+<tr><td>ハサミを運ぶ途中で落とす</td><td>次の画面で机に残っていると気づき、運び直す</td></tr>
+<tr><td>途中で人がおにぎりを置く</td><td>新しい物として認識し、食べ物として左の箱へ入れる</td></tr>
+<tr><td>「チョコは机に残して」と追加の指示</td><td>すでに箱に入れたチョコを取り出して机へ戻す</td></tr>
+</table>
+<p>これとは別に、動画の実行ではホチキスの1回目の移動が予定外に失敗しました。AIはホチキスが机に残っていることに気づき、もう一度運んでいます。</p>
+<figure><img src="scene_a.png" alt="消しゴムを右の箱へ運ぶ場面"><figcaption>動画の場面。右の画面にAIが見ている画像、指示、判断の理由を表示しています。</figcaption></figure>
+
+<h2 class="break">結果</h2>
+<p>物の配置を変えて5回実行しました。3つの出来事はすべての回で起こしています。</p>
+<div class="nums"><div><div class="big">5 / 5回</div><p>全部の物が正しい場所に入った回</p></div><div><div class="big">40 / 40</div><p>正しい場所に入った物の個数</p></div><div><div class="big">12〜13手</div><p>完了までのAIへの問い合わせ回数</p></div></div>
+<figure class="small"><img src="scene_b.png" alt="チョコを箱から机へ戻す場面"></figure>
+
+<h2>限界と実用に向けて</h2>
+<ul>
+<li>シミュレーション上の結果で、実機では確かめていません。実機では照明、物の形、掴み方のばらつきが大きくなります。</li>
+<li>物は箱形だけで、上面の文字を読んで判断しています。文字のない実物への対応は今後の課題です。</li>
+<li>1回の判断に2〜8秒かかります。動画では待ち時間を短縮し、ロボットの動きは等倍速です。</li>
+<li>5回という回数は少なく、成功率を保証するものではありません。</li>
+</ul>
+<p>物の種類が多く、ルールを全部書き切れない店舗の片付けや、倉庫の例外品の振り分けへの応用を考えています。</p>
+
+<p>使用したもの：MuJoCo、MuJoCo MenagerieのFranka Pandaモデル（Apache-2.0）、Claude API。実装にはコーディング支援AIのClaude Codeを使いました。</p>
+</body></html>
